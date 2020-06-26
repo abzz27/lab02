@@ -6,22 +6,20 @@ public class question04 {
 
 	public static void main(String[] args) {
 		
-		int males, females, total;
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter number of males");
-		males = input.nextInt();
+		int males = input.nextInt();
 		
 		System.out.println("Enter number of females");
-		females = input.nextInt();
+		int females = input.nextInt();
 		
-		total = females + males;
+		int total = females + males;
 
 		
-		double percentage_male, percentage_female;
 		
-		percentage_female = (females/ total) * 100;
-		percentage_male = (males / total) * 100;
+		double percentage_female = females * 100 / total;
+		double percentage_male = males * 100 / total;
 		
 		System.out.println(total + " people in the class");
 		System.out.println(percentage_female + "% female");
