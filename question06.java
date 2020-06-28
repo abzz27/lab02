@@ -12,20 +12,16 @@ public class question06 {
 		System.out.println("Enter amount of purchase");
 		double price = input.nextDouble();
 		
-		double price_s, price_c;
-		price_s = price * s_tax;
-		price_c = price * c_tax;
+		s_tax *= price;
+		c_tax *= price;
 		
-		System.out.println("State Tax: " + price_s);
-		System.out.println("County Tax: " + price_c);
+		System.out.println("State Tax: " + s_tax);
+		System.out.println("County Tax: " + c_tax);
 		
-		System.out.println("Total Tax: " + (price_s + price_c));
+		System.out.println("Total Tax: " + (s_tax + c_tax));
 		
-		price += price_s + price_c;
+		price += s_tax + c_tax;
 		System.out.println("Total Sales: " + price);
-		
-		
-		
 		
 	}
 
